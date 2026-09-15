@@ -169,6 +169,7 @@ const IDENTITY_ROUTES: ReadonlySet<RouteName> = new Set<RouteName>([
   'identityHome',
   'identityInsights',
   'identityRoleAnalysis',
+  'identityRoleAnalysisEntitlementScope',
   'identitySettings',
   'identityHelp',
   'identitySection',

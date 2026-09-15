@@ -56,6 +56,8 @@ export interface DataTableProps<TRow extends DataTableRow> {
   rowActions?: (row: TRow, i: number) => ReactNode;
   /** Rendered inside the table body when `rows` is empty. */
   emptyState?: DataTableEmptyState;
+  /** Set to `false` to omit the trailing row-actions column entirely. Defaults to `true`. */
+  showActions?: boolean;
   className?: string;
 }
 
@@ -80,6 +82,7 @@ export function DataTable<TRow extends DataTableRow>({
   onRowAction,
   rowActions,
   emptyState,
+  showActions = true,
   className,
 }: DataTableProps<TRow>) {
   const selectable = !!selected && !!onSelectionChange;
@@ -170,7 +173,9 @@ export function DataTable<TRow extends DataTableRow>({
             <span className={styles.headLabel}>{col.header}</span>
           </HeadCell>
         ))}
-        <HeadCell width="44px" className={styles.actionCell} pin="end" aria-label="Row actions" />
+        {showActions && (
+          <HeadCell width="44px" className={styles.actionCell} pin="end" aria-label="Row actions" />
+        )}
       </div>
 
       <div className={styles.body} role="rowgroup">
@@ -223,18 +228,20 @@ export function DataTable<TRow extends DataTableRow>({
                   {col.cell(row, i)}
                 </BodyCell>
               ))}
-              <BodyCell width="44px" className={styles.actionCell} pin="end">
-                {rowActions ? (
-                  rowActions(row, i)
-                ) : (
-                  <IconButton
-                    icon="DotsThree"
-                    ariaLabel={`Actions for ${label}`}
-                    size="s"
-                    onClick={() => onRowAction?.(row)}
-                  />
-                )}
-              </BodyCell>
+              {showActions && (
+                <BodyCell width="44px" className={styles.actionCell} pin="end">
+                  {rowActions ? (
+                    rowActions(row, i)
+                  ) : (
+                    <IconButton
+                      icon="DotsThree"
+                      ariaLabel={`Actions for ${label}`}
+                      size="s"
+                      onClick={() => onRowAction?.(row)}
+                    />
+                  )}
+                </BodyCell>
+              )}
             </div>
           );
         })}

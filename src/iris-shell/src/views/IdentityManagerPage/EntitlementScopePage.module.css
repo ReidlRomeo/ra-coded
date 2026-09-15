@@ -33,14 +33,16 @@
   color: var(--oi-content-color-tertiary);
 }
 
-.filterPanel,
-.excludePanel {
+/* ---------- Target systems ---------- */
+
+.targetSystemsPanel {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--oi-spacing-s);
   background-color: var(--oi-background-color-secondary);
   padding: var(--oi-spacing-l);
+  width: 100%;
 }
 
 .chip {
@@ -72,13 +74,99 @@
   color: var(--oi-content-color-primary);
 }
 
-.count {
-  margin: 0;
-  padding-inline-start: var(--oi-spacing-l);
+/* ---------- Analysis focus (radio group) ---------- */
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--oi-spacing-l);
+}
+
+.radioOption {
+  display: flex;
+  flex-direction: column;
+}
+
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: var(--oi-spacing-s);
+  cursor: pointer;
+}
+
+.radioInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.radioDot {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--oi-border-radius-max);
+  border: var(--oi-border-width-default) var(--oi-border-style-solid) var(--oi-border-color-strong);
+  background-color: var(--oi-background-color-primary);
+  box-shadow: var(--oi-shadow-low);
+}
+
+.radioInput:checked + .radioDot {
+  border-width: 5px;
+  border-color: var(--oi-base-color-brand);
+}
+
+.radioInput:focus-visible + .radioDot {
+  outline: var(--oi-border-width-l) var(--oi-border-style-solid) var(--oi-border-color-focus);
+  outline-offset: 2px;
+}
+
+.radioLabel {
   font-size: var(--oi-text-body-s-font-size);
   line-height: var(--oi-text-body-s-line-height);
+  font-weight: var(--oi-text-body-s-strong-font-weight);
   color: var(--oi-content-color-primary);
 }
+
+.radioHelper {
+  margin: 0;
+  padding-inline-start: 28px;
+  padding-top: var(--oi-spacing-xs);
+  font-size: var(--oi-text-body-s-font-size);
+  line-height: var(--oi-text-body-s-line-height);
+  color: var(--oi-content-color-tertiary);
+}
+
+/* ---------- Analysis refinements (checkbox) ---------- */
+
+.checkboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--oi-spacing-s);
+  cursor: pointer;
+}
+
+.checkboxText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--oi-spacing-xs);
+}
+
+.checkboxLabel {
+  font-size: var(--oi-text-body-s-font-size);
+  line-height: var(--oi-text-body-s-line-height);
+  font-weight: var(--oi-text-body-s-strong-font-weight);
+  color: var(--oi-content-color-primary);
+}
+
+.checkboxHelper {
+  font-size: var(--oi-text-body-s-font-size);
+  line-height: var(--oi-text-body-s-line-height);
+  color: var(--oi-content-color-tertiary);
+}
+
+/* ---------- Footer ---------- */
 
 .footer {
   display: flex;
@@ -94,4 +182,10 @@
   font-family: var(--oi-font-family-code);
   font-size: var(--oi-text-body-s-font-size);
   color: var(--oi-content-color-tertiary);
+}
+
+.footerEnd {
+  display: flex;
+  align-items: center;
+  gap: var(--oi-spacing-m);
 }

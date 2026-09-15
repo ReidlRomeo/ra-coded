@@ -28,6 +28,7 @@ export type Route =
   | { name: 'identityHome'; params: Record<string, never> }
   | { name: 'identityInsights'; params: Record<string, never> }
   | { name: 'identityRoleAnalysis'; params: Record<string, never> }
+  | { name: 'identityRoleAnalysisEntitlementScope'; params: Record<string, never> }
   | { name: 'identitySettings'; params: Record<string, never> }
   | { name: 'identityHelp'; params: Record<string, never> }
   | { name: 'identitySection'; params: { group: string; item: string } }
@@ -58,6 +59,7 @@ const ROUTES: RouteDef[] = [
   { name: 'services', pattern: /^#\/services$/, keys: [] },
   { name: 'identityInsights', pattern: /^#\/identity\/insights$/, keys: [] },
   { name: 'identityRoleAnalysis', pattern: /^#\/identity\/role-analysis$/, keys: [] },
+  { name: 'identityRoleAnalysisEntitlementScope', pattern: /^#\/identity\/role-analysis\/entitlement-scope$/, keys: [] },
   { name: 'identitySettings', pattern: /^#\/identity\/settings$/, keys: [] },
   { name: 'identityHelp', pattern: /^#\/identity\/help$/, keys: [] },
   { name: 'identitySection', pattern: /^#\/identity\/([^/]+)\/([^/]+)$/, keys: ['group', 'item'] },

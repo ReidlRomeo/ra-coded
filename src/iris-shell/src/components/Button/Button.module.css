@@ -93,11 +93,10 @@
   color: var(--oi-content-color-secondary);
 }
 .variant_ghost:hover:not(:disabled) {
-  background-color: var(--oi-background-color-tertiary);
   color: var(--oi-content-color-primary);
 }
 .variant_ghost:active:not(:disabled) {
-  background-color: var(--oi-background-color-tertiary);
+  color: var(--oi-content-color-primary);
 }
 
 /* ---------- icon-only modifier ---------- */

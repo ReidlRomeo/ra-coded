@@ -8,12 +8,12 @@
 .horizontal {
   flex-direction: row;
   align-items: stretch;
+  width: 100%;
 }
 
 .step {
   display: flex;
-  flex: 0 0 auto;
-  width: 192px;
+  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -90,6 +90,8 @@ button.stepInner:disabled {
   font-size: 9px;
   line-height: 1;
   font-weight: var(--oi-font-weight-600);
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 /* Completed check appears with a fade + rotate + settle (success-check). */
@@ -118,6 +120,11 @@ button.stepInner:disabled {
   border-color: var(--oi-base-color-info);
   background-color: var(--oi-base-color-info);
   color: var(--oi-content-color-constant);
+}
+
+.completed .indicator {
+  border-color: var(--oi-content-color-primary);
+  color: var(--oi-content-color-primary);
 }
 
 .error .indicator {
