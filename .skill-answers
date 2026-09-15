@@ -1,0 +1,8 @@
+project-name = Role Analyzer
+project-description = Enable customers to quickly and accurately generate and maintain business roles with minimal manual intervention, supported by simulation, explainability, and workflow-aligned governance.
+git-remote = https://github.com/ReidlRomeo/ra-coded
+figma-url = provided
+shell-product = identity-manager
+shell-mode = shell
+shell-page = role-analysis
+shell-default-page = #/identity/role-analysis
