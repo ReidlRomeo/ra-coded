@@ -6,3 +6,6 @@ shell-product = identity-manager
 shell-mode = shell
 shell-page = role-analysis
 shell-default-page = #/identity/role-analysis
+vercel-setup = done
+figma-build-mode = create-new
+figma-build-prompted = yes

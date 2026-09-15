@@ -4,7 +4,7 @@ import { Icon } from '../Icon/Icon.js';
 import styles from './Button.module.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'danger';
+  variant?: 'primary' | 'secondary' | 'danger' | 'ghost';
   size?: 's' | 'default' | 'l';
   /** Icon name to render before the label. */
   iconLead?: string;

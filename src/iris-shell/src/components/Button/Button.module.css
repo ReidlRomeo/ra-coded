@@ -88,6 +88,18 @@
   background-color: var(--oi-button-background-danger-active);
 }
 
+.variant_ghost {
+  background-color: transparent;
+  color: var(--oi-content-color-secondary);
+}
+.variant_ghost:hover:not(:disabled) {
+  background-color: var(--oi-background-color-tertiary);
+  color: var(--oi-content-color-primary);
+}
+.variant_ghost:active:not(:disabled) {
+  background-color: var(--oi-background-color-tertiary);
+}
+
 /* ---------- icon-only modifier ---------- */
 .iconOnly {
   padding-inline: 0;

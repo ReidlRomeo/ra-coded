@@ -16,6 +16,7 @@ import { InsightsPage } from './views/InsightsPage/InsightsPage.js';
 import { ServicesPage } from './views/ServicesPage/ServicesPage.js';
 import { IdentityManagerPage } from './views/IdentityManagerPage/IdentityManagerPage.js';
 import { IdentityInsightsPage } from './views/IdentityManagerPage/IdentityInsightsPage.js';
+import { RoleAnalysisPage } from './views/IdentityManagerPage/RoleAnalysisPage.js';
 import { IdentityPlaceholder } from './views/IdentityManagerPage/IdentityPlaceholder.js';
 import { IdentitySectionPage } from './views/IdentityManagerPage/IdentitySectionPage.js';
 import { SafeguardPage } from './views/SafeguardPage/SafeguardPage.js';
@@ -52,13 +53,7 @@ export default function App() {
           {route.name === 'services' && <ServicesPage />}
           {route.name === 'identityHome' && <IdentityManagerPage />}
           {route.name === 'identityInsights' && <IdentityInsightsPage />}
-          {route.name === 'identityRoleAnalysis' && (
-            <IdentityPlaceholder
-              title="Role Analysis"
-              icon="ChartLine"
-              activeItem="#/identity/role-analysis"
-            />
-          )}
+          {route.name === 'identityRoleAnalysis' && <RoleAnalysisPage />}
           {route.name === 'identitySettings' && (
             <IdentityPlaceholder title="Settings" icon="GearFine" activeItem="#/identity/settings" />
           )}
